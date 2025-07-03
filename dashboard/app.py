@@ -11,7 +11,7 @@ from shinywidgets import render_plotly
 from shiny import reactive
 from shiny.express import input, render, ui
 
-ui.page_opts(title="Map hed goes here", fillable=True)
+ui.page_opts(title="West Town consistently rattiest community area in Chicago", fillable=True)
 
 years = ["All"] + list(range(2019, 2024 + 1))
 
@@ -26,7 +26,7 @@ with ui.layout_columns(col_widths=(3, 9)):
         ui.input_select("year", "Select year", years, selected="All")
 
     with ui.card(full_screen=True):
-        ui.card_header("Cool Map")
+
 
         @render_plotly
         def rat_map():
