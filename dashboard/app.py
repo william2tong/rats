@@ -17,7 +17,7 @@ years = ["All"] + list(range(2019, 2024 + 1))
 
 with ui.layout_columns(col_widths=(3, 9)):
     with ui.card():
-        "Select year and metric"
+        "Toggle year and metric here"
 
         ui.input_select("metric", "Select rodent control metric", {"calls": "Annual 311 rodent calls", 
                                                                 "calls per capita":"Annual 311 rodent calls per capita", 
