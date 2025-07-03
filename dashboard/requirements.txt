@@ -3,5 +3,4 @@ shiny
 seaborn
 pandas
 plotly
-json
 shinywidgets
