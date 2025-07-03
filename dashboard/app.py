@@ -11,7 +11,7 @@ from shinywidgets import render_plotly
 from shiny import reactive
 from shiny.express import input, render, ui
 
-ui.page_opts(title="West Town consistently rattiest community area in Chicago", fillable=True)
+ui.page_opts(title="West Town consistently rattiest community area in Chicago, based on 311 calls", fillable=True)
 
 years = ["All"] + list(range(2019, 2024 + 1))
 
@@ -52,7 +52,7 @@ with ui.layout_columns(col_widths=(3, 9)):
                            color_continuous_scale="sunsetdark",
                            labels={'metric':'metric'},
                            hover_name='comm_name',
-                           hover_data=['metric', 'value']
+                           hover_data={"comm_area": False, 'metric':True, 'value':f':.0f'}
                           )
             
             fig.update_geos(fitbounds="locations", visible=True)
